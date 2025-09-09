@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3D Chess Master — Someshwar</title>
+
+  
+  <link rel="icon" href="assets/logo.png" />
+
+  
+  <link rel="stylesheet" href="css/style.css" />
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+</head>
+<body>
+  
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-inner">
+      <div class="logo">♔</div>
+      <div>
+        <div class="title">3D Chess Master</div>
+        <div class="subtitle">Developed by Someshwar — Loading...</div>
+        <div class="loading-bar"><div class="progress"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="header">
+      <div class="brand">
+        <div class="brand-icon">♟</div>
+        <h1>3D Chess Master</h1>
+      </div>
+
+      <div class="controls">
+        <button id="newBtn" class="btn">New Game</button>
+        <button id="undoBtn" class="btn secondary">Undo</button>
+        <button id="aiBtn" class="btn secondary">Play vs AI</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="threeRoot" class="canvas-root"></div>
+
+      <aside class="panel" id="infoPanel">
+        <div id="turnBox" class="turn">White's Turn</div>
+        <div id="statusBox" class="status">Game in Progress</div>
+        <div class="captures">
+          <div class="bucket">
+            <div class="cap-title">Captured by White</div>
+            <div id="capturedByWhite" class="cap-row"></div>
+          </div>
+          <div class="bucket">
+            <div class="cap-title">Captured by Black</div>
+            <div id="capturedByBlack" class="cap-row"></div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <small>Made with ❤️ by Someshwar — Clone it, learn it, own it.</small>
+    </footer>
+  </div>
+
+  <script src="js/chess.js"></script>
+</body>
+</html>
